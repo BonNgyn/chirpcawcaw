@@ -7,21 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A911244DD8E4A52BE1DDFDB /* Pods_ChirpCawCaw.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1DAC915B70F734A76BA16D0 /* Pods_ChirpCawCaw.framework */; };
+		6139BE851D23682300A02DDC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6139BE841D23682300A02DDC /* User.swift */; };
+		6139BE871D23683100A02DDC /* Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6139BE861D23683100A02DDC /* Tweet.swift */; };
+		6139BE8A1D236E0400A02DDC /* TwitterClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6139BE891D236E0400A02DDC /* TwitterClient.swift */; };
+		6139BE8C1D23EF2F00A02DDC /* TweetsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6139BE8B1D23EF2F00A02DDC /* TweetsViewController.swift */; };
 		6162C77F1D21C92400575759 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6162C77E1D21C92400575759 /* AppDelegate.swift */; };
-		6162C7811D21C92400575759 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6162C7801D21C92400575759 /* ViewController.swift */; };
 		6162C7841D21C92400575759 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6162C7821D21C92400575759 /* Main.storyboard */; };
 		6162C7861D21C92400575759 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6162C7851D21C92400575759 /* Assets.xcassets */; };
 		6162C7891D21C92400575759 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6162C7871D21C92400575759 /* LaunchScreen.storyboard */; };
+		6162C7911D21CEA700575759 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6162C7901D21CEA700575759 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6139BE841D23682300A02DDC /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		6139BE861D23683100A02DDC /* Tweet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tweet.swift; sourceTree = "<group>"; };
+		6139BE891D236E0400A02DDC /* TwitterClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterClient.swift; sourceTree = "<group>"; };
+		6139BE8B1D23EF2F00A02DDC /* TweetsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetsViewController.swift; sourceTree = "<group>"; };
 		6162C77B1D21C92400575759 /* ChirpCawCaw.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChirpCawCaw.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6162C77E1D21C92400575759 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6162C7801D21C92400575759 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		6162C7831D21C92400575759 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6162C7851D21C92400575759 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6162C7881D21C92400575759 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6162C78A1D21C92400575759 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6162C7901D21CEA700575759 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		B934BAA5185D243FD1EE0DE8 /* Pods-ChirpCawCaw.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChirpCawCaw.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChirpCawCaw/Pods-ChirpCawCaw.release.xcconfig"; sourceTree = "<group>"; };
+		F0B372346BB9D971188F5A59 /* Pods-ChirpCawCaw.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChirpCawCaw.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChirpCawCaw/Pods-ChirpCawCaw.debug.xcconfig"; sourceTree = "<group>"; };
+		F1DAC915B70F734A76BA16D0 /* Pods_ChirpCawCaw.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChirpCawCaw.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +41,55 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A911244DD8E4A52BE1DDFDB /* Pods_ChirpCawCaw.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1AC848ED18AD6980ED10AD36 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F0B372346BB9D971188F5A59 /* Pods-ChirpCawCaw.debug.xcconfig */,
+				B934BAA5185D243FD1EE0DE8 /* Pods-ChirpCawCaw.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		6139BE821D23386300A02DDC /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				6162C7901D21CEA700575759 /* LoginViewController.swift */,
+				6139BE8B1D23EF2F00A02DDC /* TweetsViewController.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		6139BE831D2367FE00A02DDC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				6139BE841D23682300A02DDC /* User.swift */,
+				6139BE861D23683100A02DDC /* Tweet.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		6139BE881D236DDF00A02DDC /* API */ = {
+			isa = PBXGroup;
+			children = (
+				6139BE891D236E0400A02DDC /* TwitterClient.swift */,
+			);
+			name = API;
+			sourceTree = "<group>";
+		};
 		6162C7721D21C92400575759 = {
 			isa = PBXGroup;
 			children = (
 				6162C77D1D21C92400575759 /* ChirpCawCaw */,
 				6162C77C1D21C92400575759 /* Products */,
+				1AC848ED18AD6980ED10AD36 /* Pods */,
+				E4393BA8D21C8922E2B0A683 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +104,24 @@
 		6162C77D1D21C92400575759 /* ChirpCawCaw */ = {
 			isa = PBXGroup;
 			children = (
+				6139BE881D236DDF00A02DDC /* API */,
+				6139BE831D2367FE00A02DDC /* Models */,
+				6139BE821D23386300A02DDC /* View Controllers */,
 				6162C77E1D21C92400575759 /* AppDelegate.swift */,
-				6162C7801D21C92400575759 /* ViewController.swift */,
 				6162C7821D21C92400575759 /* Main.storyboard */,
-				6162C7851D21C92400575759 /* Assets.xcassets */,
 				6162C7871D21C92400575759 /* LaunchScreen.storyboard */,
+				6162C7851D21C92400575759 /* Assets.xcassets */,
 				6162C78A1D21C92400575759 /* Info.plist */,
 			);
 			path = ChirpCawCaw;
+			sourceTree = "<group>";
+		};
+		E4393BA8D21C8922E2B0A683 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F1DAC915B70F734A76BA16D0 /* Pods_ChirpCawCaw.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +131,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6162C78D1D21C92400575759 /* Build configuration list for PBXNativeTarget "ChirpCawCaw" */;
 			buildPhases = (
+				CFB6DED9BE29BE10B9EBBBD2 /* [CP] Check Pods Manifest.lock */,
 				6162C7771D21C92400575759 /* Sources */,
 				6162C7781D21C92400575759 /* Frameworks */,
 				6162C7791D21C92400575759 /* Resources */,
+				8E7F56333252A3D6F463983D /* [CP] Embed Pods Frameworks */,
+				0A8539F73D598D36B3A6D54E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -96,6 +159,7 @@
 				TargetAttributes = {
 					6162C77A1D21C92400575759 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = U63TPR2C89;
 					};
 				};
 			};
@@ -130,12 +194,64 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0A8539F73D598D36B3A6D54E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ChirpCawCaw/Pods-ChirpCawCaw-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8E7F56333252A3D6F463983D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ChirpCawCaw/Pods-ChirpCawCaw-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CFB6DED9BE29BE10B9EBBBD2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		6162C7771D21C92400575759 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6162C7811D21C92400575759 /* ViewController.swift in Sources */,
+				6139BE851D23682300A02DDC /* User.swift in Sources */,
+				6139BE871D23683100A02DDC /* Tweet.swift in Sources */,
+				6162C7911D21CEA700575759 /* LoginViewController.swift in Sources */,
+				6139BE8C1D23EF2F00A02DDC /* TweetsViewController.swift in Sources */,
+				6139BE8A1D236E0400A02DDC /* TwitterClient.swift in Sources */,
 				6162C77F1D21C92400575759 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -247,8 +363,10 @@
 		};
 		6162C78E1D21C92400575759 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F0B372346BB9D971188F5A59 /* Pods-ChirpCawCaw.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = ChirpCawCaw/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.codepath.ChirpCawCaw;
@@ -258,8 +376,10 @@
 		};
 		6162C78F1D21C92400575759 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B934BAA5185D243FD1EE0DE8 /* Pods-ChirpCawCaw.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = ChirpCawCaw/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.codepath.ChirpCawCaw;
@@ -286,6 +406,7 @@
 				6162C78F1D21C92400575759 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
