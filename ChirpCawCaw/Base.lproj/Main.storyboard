@@ -104,42 +104,29 @@
                                                     </attributedString>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mq0-rK-JXg">
-                                                    <rect key="frame" x="281" y="27" width="86" height="21"/>
-                                                    <attributedString key="attributedText">
-                                                        <fragment content="Timestamp">
-                                                            <attributes>
-                                                                <color key="NSColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                                <font key="NSFont" size="11" name="HelveticaNeue-Thin"/>
-                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                            </attributes>
-                                                        </fragment>
-                                                    </attributedString>
-                                                    <color key="highlightedColor" red="0.0" green="0.0" blue="0.0" alpha="0.68060344827586206" colorSpace="calibratedRGB"/>
-                                                </label>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T5Q-Dm-Tp5">
                                                     <rect key="frame" x="81" y="212" width="20" height="21.5"/>
-                                                    <state key="normal" title="Button" image="reply-action_0.png"/>
+                                                    <state key="normal" image="reply-action_0.png"/>
                                                     <connections>
                                                         <action selector="replyButton:" destination="RhH-U5-o0T" eventType="touchUpInside" id="qba-R2-ZdY"/>
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xfZ-VB-eXh">
-                                                    <rect key="frame" x="145" y="210" width="24" height="24.5"/>
-                                                    <state key="normal" title="Button" image="retweet-action.png"/>
+                                                    <rect key="frame" x="146" y="210" width="24" height="24.5"/>
+                                                    <state key="normal" image="retweet-action.png"/>
                                                     <connections>
                                                         <action selector="retweetButton:" destination="RhH-U5-o0T" eventType="touchUpInside" id="abx-Re-BXL"/>
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8gh-7o-Gtu">
-                                                    <rect key="frame" x="223" y="211.5" width="19" height="23"/>
-                                                    <state key="normal" title="Button" image="like-action.png"/>
+                                                    <rect key="frame" x="218" y="212" width="19" height="23"/>
+                                                    <state key="normal" image="like-action.png"/>
                                                     <connections>
                                                         <action selector="likeButton:" destination="RhH-U5-o0T" eventType="touchUpInside" id="Y3E-ju-gBH"/>
                                                     </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lTJ-qP-hLl">
-                                                    <rect key="frame" x="173" y="212" width="34" height="23"/>
+                                                    <rect key="frame" x="173" y="210" width="34" height="23"/>
                                                     <attributedString key="attributedText">
                                                         <fragment content="0">
                                                             <attributes>
@@ -162,6 +149,19 @@
                                                     </attributedString>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mq0-rK-JXg">
+                                                    <rect key="frame" x="281" y="26" width="86" height="21"/>
+                                                    <attributedString key="attributedText">
+                                                        <fragment content="Timestamp">
+                                                            <attributes>
+                                                                <color key="NSColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                <font key="NSFont" size="11" name="HelveticaNeue-Thin"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                    <color key="highlightedColor" red="0.0" green="0.0" blue="0.0" alpha="0.68060344827586206" colorSpace="calibratedRGB"/>
+                                                </label>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
@@ -173,6 +173,7 @@
                                             <outlet property="tweetLabel" destination="l83-Wc-0l6" id="ACV-rr-Sjf"/>
                                             <outlet property="userImage" destination="XF0-hf-oml" id="Y7B-iS-5aR"/>
                                             <outlet property="usernameLabel" destination="njI-ju-Eon" id="He0-1y-hPf"/>
+                                            <segue destination="Gg1-fK-Fpl" kind="presentation" identifier="detailSegue" id="2rq-1u-Azd"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -195,6 +196,108 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Xh-VN-etP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1340.5" y="424.5"/>
+        </scene>
+        <!--Details View Controller-->
+        <scene sceneID="ZTH-tg-DQT">
+            <objects>
+                <viewController id="Gg1-fK-Fpl" customClass="DetailsViewController" customModule="ChirpCawCaw" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9hL-z4-VEZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="tk5-zz-3kr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2yz-De-2kU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Acb-Ob-5zy">
+                                <rect key="frame" x="0.0" y="64" width="375" height="293"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xw3-Ez-W7r">
+                                        <rect key="frame" x="20" y="18" width="62" height="65"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mpw-UB-9mk">
+                                        <rect key="frame" x="90" y="24" width="198" height="21"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="Username">
+                                                <attributes>
+                                                    <color key="NSColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <font key="NSFont" size="17" name="HelveticaNeue"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QVU-i8-RV1">
+                                        <rect key="frame" x="90" y="48" width="198" height="21"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="Screen_name">
+                                                <attributes>
+                                                    <color key="NSColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <font key="NSFont" size="13" name="HelveticaNeue-Thin"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X1y-mK-yhk">
+                                        <rect key="frame" x="20" y="206" width="131" height="21"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="Timestamp">
+                                                <attributes>
+                                                    <color key="NSColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <font key="NSFont" size="11" name="HelveticaNeue-Thin"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <color key="highlightedColor" red="0.0" green="0.0" blue="0.0" alpha="0.68060344829999997" colorSpace="calibratedRGB"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o1w-NZ-i4X">
+                                        <rect key="frame" x="20" y="91" width="335" height="107"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="tweet">
+                                                <attributes>
+                                                    <color key="NSColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <font key="NSFont" size="15" name="HelveticaNeue"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lDn-Bu-T1q">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="Tweet" id="HUF-Tx-teg">
+                                        <barButtonItem key="rightBarButtonItem" systemItem="stop" id="NjZ-Tl-mik">
+                                            <connections>
+                                                <action selector="cancelButtonTapped:" destination="Gg1-fK-Fpl" id="b66-Nt-ijp"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="detailScreenName" destination="QVU-i8-RV1" id="Jhf-py-aVj"/>
+                        <outlet property="detailTimestamp" destination="X1y-mK-yhk" id="MXm-1u-MHT"/>
+                        <outlet property="detailTweet" destination="o1w-NZ-i4X" id="2Kt-6l-y4Z"/>
+                        <outlet property="detailUserImage" destination="xw3-Ez-W7r" id="D0k-WT-tHC"/>
+                        <outlet property="detailUsername" destination="Mpw-UB-9mk" id="nv6-fJ-jUH"/>
+                        <segue destination="JRK-aT-ukt" kind="presentation" identifier="unwindToHome" id="h3h-le-FJe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qTW-8R-gvv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1789.5" y="424.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="wJE-QQ-0A9">
@@ -221,4 +324,7 @@
         <image name="reply-action_0.png" width="65" height="72"/>
         <image name="retweet-action.png" width="75" height="72"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="h3h-le-FJe"/>
+    </inferredMetricsTieBreakers>
 </document>

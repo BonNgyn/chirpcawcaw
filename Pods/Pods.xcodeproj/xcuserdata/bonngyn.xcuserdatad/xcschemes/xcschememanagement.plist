@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>DateTools.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-ChirpCawCaw.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -27,12 +32,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>3B0CA1F75AEF0F75AEB434B601E8FCCA</key>
+		<key>38366EC54980451597FA30D1ACD9F32B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>445B3D47256376A8FB06D383FDBEA0C4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>AFEDA8059B169E4068B6DCC4D2F0B0E9</key>
 		<dict>
 			<key>primary</key>
 			<true/>

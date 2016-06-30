@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import DateTools
 
 class TweetsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -17,23 +18,15 @@ class TweetsViewController: UIViewController, UITableViewDelegate, UITableViewDa
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        
         self.tableView.delegate = self
         self.tableView.dataSource = self
         
         refreshData()
         
-        TwitterClient.sharedInstance.homeTimeLine({ (tweets: [Tweet]) -> () in
-            self.tweets = tweets
-            
-            for tweet in tweets {
-                print(tweet.text)
-            }
-        }) { (error: NSError) -> () in
-            print(error.localizedDescription)
-        }
-        // Do any additional setup after loading the view.
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(refreshControlAction(_:)), forControlEvents: UIControlEvents.ValueChanged)
+        tableView.insertSubview(refreshControl, atIndex: 0)
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -52,14 +45,8 @@ class TweetsViewController: UIViewController, UITableViewDelegate, UITableViewDa
         cell.usernameLabel.text = tweet.user?.name as? String
         cell.screenNameLabel.text = tweet.user?.screenname as? String
         cell.tweetLabel.text = tweet.text as? String
-        
-        let url = tweet.user?.profileUrl
-        
-        if let data = NSData(contentsOfURL: url!) {
-            cell.userImage.image = UIImage(data:data)
-        }
-        
-        
+        cell.userImage.image = getUserImage(tweet)
+        cell.timestampLabel.text = tweet.timestamp?.timeAgoSinceNow()
         
         return cell
     }
@@ -71,6 +58,11 @@ class TweetsViewController: UIViewController, UITableViewDelegate, UITableViewDa
         }) { (error: NSError) in
             print(error.localizedDescription)
         }
+    }
+    
+    func refreshControlAction(refreshControl: UIRefreshControl) {
+        refreshData()
+        refreshControl.endRefreshing()
     }
     
     
@@ -89,6 +81,36 @@ class TweetsViewController: UIViewController, UITableViewDelegate, UITableViewDa
     @IBAction func likeButton(sender: AnyObject) {
         
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if let identifier = segue.identifier {
+            switch identifier {
+            case "detailSegue":
+                let vc = segue.destinationViewController as! DetailsViewController
+                if let indexPath = self.tableView.indexPathForCell(sender as! UITableViewCell) {
+                    let tweet = self.tweets[indexPath.row]
+                    
+                    vc.userNameSegue = tweet.user?.name as? String
+                    vc.screenNameSegue = tweet.user?.screenname as? String
+                    vc.tweetSegue = tweet.text as? String
+                    vc.userImageSegue = getUserImage(tweet)
+                    vc.timestampSegue = tweet.timestamp?.timeAgoSinceNow()
+                }
+                default: break
+            }
+        }
+    }
+    
+    func getUserImage(tweet: Tweet) -> UIImage {
+        let url = tweet.user?.profileUrl
+        var image: UIImage!
+        
+        if let data = NSData(contentsOfURL: url!) {
+            image = UIImage(data:data)
+        }
+        return image
+    }
+    
     /*
      // MARK: - Navigation
      
