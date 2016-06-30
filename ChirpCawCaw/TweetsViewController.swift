@@ -106,7 +106,7 @@ class TweetsViewController: UIViewController, UITableViewDelegate, UITableViewDa
         var image: UIImage!
         
         if let data = NSData(contentsOfURL: url!) {
-            image = UIImage(data:data)
+            image = UIImage(data:data)!
         }
         return image
     }
