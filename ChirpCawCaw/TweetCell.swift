@@ -17,24 +17,20 @@ class TweetCell: UITableViewCell {
             self.screenNameLabel.text = "@" + ((tweet!.user?.screenname)! as String)
             self.tweetLabel.text = tweet!.text as? String
             self.tweetId = tweet!.id
-
+            self.timestampLabel.text = tweet!.timestamp?.shortTimeAgoSinceNow()
+            self.retweetCountLabel.text = "\(tweet!.retweetCount)"
+            self.likeCountLabel.text = "\(tweet!.favoritesCount)"
         }
     }
     
     var tweetId: String!
     
     @IBOutlet weak var userImage: UIImageView!
-    
     @IBOutlet weak var usernameLabel: UILabel!
-    
     @IBOutlet weak var screenNameLabel: UILabel!
-    
     @IBOutlet weak var tweetLabel: UILabel!
-    
     @IBOutlet weak var timestampLabel: UILabel!
-    
     @IBOutlet weak var retweetCountLabel: UILabel!
-    
     @IBOutlet weak var likeCountLabel: UILabel!
     
     override func awakeFromNib() {
@@ -53,8 +49,6 @@ class TweetCell: UITableViewCell {
     }
     
     @IBAction func retweetButton(sender: AnyObject) {
-        print(tweetId)
-        
         TwitterClient.sharedInstance.retweet(tweetId, success: {
             print("RETWEET PLEASE")
         }) { (error: NSError) in
@@ -63,7 +57,7 @@ class TweetCell: UITableViewCell {
     }
     
     @IBAction func likeButton(sender: AnyObject) {
-        TwitterClient.sharedInstance.like( (tweet?.id)!,success: {
+        TwitterClient.sharedInstance.like(true, id: (tweet?.id)!,success: {
             print("LIKED")
         }) { (error: NSError) in
             print("ERROR: \(error.localizedDescription)")

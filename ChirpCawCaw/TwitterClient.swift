@@ -75,24 +75,33 @@ class TwitterClient: BDBOAuth1SessionManager {
         })
     }
     
-    func like(tid: String, success: () -> (), failure: (NSError) -> ()) {
-        POST("1.1/favorites/create.json?id=\(id)", parameters: nil, progress: nil, success: { (task: NSURLSessionDataTask, response: AnyObject?) in
+    func like(type: Bool, id: String, success: () -> (), failure: (NSError) -> ()) {
+        var favoriteTask: String = ""
+        
+        if(type) {
+            favoriteTask = "create"
+        } else {
+            favoriteTask = "destroy"
+        }
+        
+        POST("1.1/favorites/\(favoriteTask).json?id=\(id)", parameters: nil, progress: nil, success: { (task: NSURLSessionDataTask, response: AnyObject?) in
             success()
         }) { (task: NSURLSessionDataTask?, error: NSError) in
             failure(error)
         }
     }
     
-    func composeTweet(params: NSDictionary?, completion:(error: NSError?) ->  ()) {
+    func composeTweet(status: String, completion:(error: NSError?) ->  ()) {
+        let params = ["status": status]
+        
         POST("1.1/statuses/update.json", parameters: params, progress: nil, success: { (task: NSURLSessionDataTask, response: AnyObject?) in
             print("tweeted!")
             completion(error: nil)
             
         }) { (task: NSURLSessionDataTask?, error: NSError) in
-                print(error.localizedDescription)
+            print(error.localizedDescription)
         }
     }
-    
     
     func handleOpenUrl(url: NSURL) {
         let requestToken = BDBOAuth1Credential(queryString: url.query)

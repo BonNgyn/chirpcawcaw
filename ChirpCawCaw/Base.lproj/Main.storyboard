@@ -168,7 +168,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="likeCountLabel" destination="xiO-uB-dOf" id="9L5-Lb-ddc"/>
+                                            <outlet property="likeCountLabel" destination="xiO-uB-dOf" id="uOB-0i-HdW"/>
                                             <outlet property="retweetCountLabel" destination="wQS-ha-vK9" id="DGZ-iG-OSE"/>
                                             <outlet property="screenNameLabel" destination="3rB-ec-x5U" id="8JJ-ie-5H9"/>
                                             <outlet property="timestampLabel" destination="Hcg-N0-aQc" id="U98-Sf-wWn"/>
@@ -646,7 +646,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="Zkd-0P-NNt">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="NTE-r8-hnZ" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="tabBarNavigator" automaticallyAdjustsScrollViewInsets="NO" id="NTE-r8-hnZ" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="pPy-v3-dJU">
                         <autoresizingMask key="autoresizingMask"/>

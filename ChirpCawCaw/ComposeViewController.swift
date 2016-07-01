@@ -28,15 +28,11 @@ class ComposeViewController: UIViewController {
     }
     
     @IBAction func cancelButton(sender: AnyObject) {
-//        performSegueWithIdentifier("cancelComposeSegue", sender: self)
         self.dismissViewControllerAnimated(true, completion: nil)
     }
 
     @IBAction func tweetButton(sender: AnyObject) {
-        var params = NSDictionary()
-        params = ["tweetStatus" : tweetField.text!]
-        print(params)
-        TwitterClient.sharedInstance.composeTweet(params) { (error) in
+        TwitterClient.sharedInstance.composeTweet(tweetField.text!) { (error) in
             self.dismissViewControllerAnimated(true, completion: nil)
         }
     }
