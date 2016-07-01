@@ -42,12 +42,18 @@ class TweetsViewController: UIViewController, UITableViewDelegate, UITableViewDa
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("myTweetCell", forIndexPath: indexPath) as! TweetCell
         let tweet = tweets[indexPath.row]
+//        
+//        cell.usernameLabel.text = tweet.user?.name as? String
+//        cell.screenNameLabel.text = "@ \(tweet.user?.screenname as! String)"
+//        cell.tweetLabel.text = tweet.text as? String
+//        cell.userImage.image = getUserImage(tweet)
+//        cell.timestampLabel.text = tweet.timestamp?.shortTimeAgoSinceNow()
+//        
+//        cell.retweetCountLabel.text = "\(tweet.retweetCount)"
+//        cell.likeCountLabel.text = "\(tweet.favoritesCount)"
         
-        cell.usernameLabel.text = tweet.user?.name as? String
-        cell.screenNameLabel.text = "@ \(tweet.user?.screenname as! String)"
-        cell.tweetLabel.text = tweet.text as? String
-        cell.userImage.image = getUserImage(tweet)
-        cell.timestampLabel.text = tweet.timestamp?.shortTimeAgoSinceNow()
+        cell.tweet = tweet
+        
         
         return cell
     }
@@ -71,18 +77,6 @@ class TweetsViewController: UIViewController, UITableViewDelegate, UITableViewDa
         TwitterClient.sharedInstance.logout()
     }
     
-    @IBAction func replyButton(sender: AnyObject) {
-        
-    }
-    
-    @IBAction func retweetButton(sender: AnyObject) {
-        
-    }
-    
-    @IBAction func likeButton(sender: AnyObject) {
-        
-    }
-    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if let identifier = segue.identifier {
             switch identifier {
@@ -96,12 +90,14 @@ class TweetsViewController: UIViewController, UITableViewDelegate, UITableViewDa
                     vc.tweetSegue = tweet.text as? String
                     vc.userImageSegue = getUserImage(tweet)
                     vc.timestampSegue = tweet.timestamp?.toString(format: .Custom("MM/dd/yy, H:mm a"))
+                    vc.retweetCountSegue = "\(tweet.retweetCount)"
+                    vc.likeCountSegue = "\(tweet.favoritesCount)"
                 }
-                default: break
+            default: break
             }
         }
     }
-
+    
     func getUserImage(tweet: Tweet) -> UIImage {
         let url = tweet.user?.profileUrl
         var image: UIImage = UIImage(named: "no_profileImage.jpeg")!

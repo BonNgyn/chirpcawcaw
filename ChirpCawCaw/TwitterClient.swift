@@ -35,11 +35,6 @@ class TwitterClient: BDBOAuth1SessionManager {
             
             success(user)
             
-//            print("Name: \(user.name)")
-//            print("Screen name: \(user.screenname)")
-//            print("Profile Url: \(user.profileUrl)")
-//            print("Description: \(user.tagline)")
-            
             }, failure: { (task: NSURLSessionDataTask?, error: NSError) in
                 print(error.localizedDescription)
                 failure(error)
@@ -62,13 +57,42 @@ class TwitterClient: BDBOAuth1SessionManager {
     }
     
     func logout() {
-            User.currentUser = nil
-            deauthorize()
+        User.currentUser = nil
+        deauthorize()
         
-            print("User has successfully logged out")
+        print("User has successfully logged out")
         
-            NSNotificationCenter.defaultCenter().postNotificationName(User.userDidLogoutNotification, object: nil)
+        NSNotificationCenter.defaultCenter().postNotificationName(User.userDidLogoutNotification, object: nil)
     }
+    
+    func retweet(id: String, success: () -> (), failure: (NSError) -> ()) {
+        POST("1.1/statuses/retweet/\(id).json", parameters: nil, progress: nil, success: { (task: NSURLSessionDataTask, response: AnyObject?) in
+            print("Retweeted!!")
+            
+            success()
+            }, failure: { (task: NSURLSessionDataTask?, error: NSError) in
+                failure(error)
+        })
+    }
+    
+    func like(tid: String, success: () -> (), failure: (NSError) -> ()) {
+        POST("1.1/favorites/create.json?id=\(id)", parameters: nil, progress: nil, success: { (task: NSURLSessionDataTask, response: AnyObject?) in
+            success()
+        }) { (task: NSURLSessionDataTask?, error: NSError) in
+            failure(error)
+        }
+    }
+    
+    func composeTweet(params: NSDictionary?, completion:(error: NSError?) ->  ()) {
+        POST("1.1/statuses/update.json", parameters: params, progress: nil, success: { (task: NSURLSessionDataTask, response: AnyObject?) in
+            print("tweeted!")
+            completion(error: nil)
+            
+        }) { (task: NSURLSessionDataTask?, error: NSError) in
+                print(error.localizedDescription)
+        }
+    }
+    
     
     func handleOpenUrl(url: NSURL) {
         let requestToken = BDBOAuth1Credential(queryString: url.query)

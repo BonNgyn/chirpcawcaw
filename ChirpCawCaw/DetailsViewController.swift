@@ -15,12 +15,16 @@ class DetailsViewController: UIViewController {
     var screenNameSegue: String!
     var timestampSegue: String!
     var tweetSegue: String!
+    var retweetCountSegue: String!
+    var likeCountSegue: String!
 
     @IBOutlet weak var detailUserImage: UIImageView!
     @IBOutlet weak var detailUsername: UILabel!
     @IBOutlet weak var detailScreenName: UILabel!
     @IBOutlet weak var detailTimestamp: UILabel!
     @IBOutlet weak var detailTweet: UILabel!
+    @IBOutlet weak var detailRetweetCount: UILabel!
+    @IBOutlet weak var detailLikeCount: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +34,8 @@ class DetailsViewController: UIViewController {
         detailScreenName.text = screenNameSegue
         detailTimestamp.text = timestampSegue
         detailTweet.text = tweetSegue
+        detailRetweetCount.text = retweetCountSegue
+        detailLikeCount.text = likeCountSegue
 
         // Do any additional setup after loading the view.
     }
@@ -40,7 +46,7 @@ class DetailsViewController: UIViewController {
     }
     
     @IBAction func cancelButtonTapped(sender: AnyObject) {
-        self.performSegueWithIdentifier("unwindToHome", sender: self)
+        self.dismissViewControllerAnimated(true, completion: nil)
     }
 
     /*
