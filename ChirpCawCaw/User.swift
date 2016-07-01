@@ -14,6 +14,8 @@ class User: NSObject {
     var profileUrl: NSURL?
     var tagline: NSString?
     
+    var profileImageBool: Bool?
+    
     var dictionary: NSDictionary?
     
     init(dictionary: NSDictionary) {
@@ -28,6 +30,7 @@ class User: NSObject {
         
         tagline = dictionary["description"] as? String
         
+        profileImageBool = dictionary["default_profile_image"] as? Bool
     }
     
     static var _currentUser: User?

@@ -15,6 +15,7 @@
 		6139BE8F1D24794F00A02DDC /* TweetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6139BE8E1D24794E00A02DDC /* TweetCell.swift */; };
 		6139BE921D247BA600A02DDC /* Twitter Icons in Resources */ = {isa = PBXBuildFile; fileRef = 6139BE911D247BA600A02DDC /* Twitter Icons */; };
 		6139BE941D256F4600A02DDC /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6139BE931D256F4600A02DDC /* DetailsViewController.swift */; };
+		6139BE981D26220000A02DDC /* no_profileImage.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 6139BE971D26220000A02DDC /* no_profileImage.jpeg */; };
 		6162C77F1D21C92400575759 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6162C77E1D21C92400575759 /* AppDelegate.swift */; };
 		6162C7841D21C92400575759 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6162C7821D21C92400575759 /* Main.storyboard */; };
 		6162C7861D21C92400575759 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6162C7851D21C92400575759 /* Assets.xcassets */; };
@@ -30,6 +31,7 @@
 		6139BE8E1D24794E00A02DDC /* TweetCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetCell.swift; sourceTree = "<group>"; };
 		6139BE911D247BA600A02DDC /* Twitter Icons */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "Twitter Icons"; path = "../../../../../Desktop/Twitter Icons"; sourceTree = "<group>"; };
 		6139BE931D256F4600A02DDC /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		6139BE971D26220000A02DDC /* no_profileImage.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = no_profileImage.jpeg; path = ../../../../../Desktop/no_profileImage.jpeg; sourceTree = "<group>"; };
 		6162C77B1D21C92400575759 /* ChirpCawCaw.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChirpCawCaw.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6162C77E1D21C92400575759 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6162C7831D21C92400575759 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 		6139BE901D247B9800A02DDC /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				6139BE971D26220000A02DDC /* no_profileImage.jpeg */,
 				6139BE911D247BA600A02DDC /* Twitter Icons */,
 			);
 			name = Images;
@@ -211,6 +214,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6139BE981D26220000A02DDC /* no_profileImage.jpeg in Resources */,
 				6139BE921D247BA600A02DDC /* Twitter Icons in Resources */,
 				6162C7891D21C92400575759 /* LaunchScreen.storyboard in Resources */,
 				6162C7861D21C92400575759 /* Assets.xcassets in Resources */,

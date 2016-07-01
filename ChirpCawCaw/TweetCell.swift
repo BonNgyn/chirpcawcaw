@@ -24,6 +24,9 @@ class TweetCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        self.userImage.layer.cornerRadius = 8.0;
+        self.userImage.clipsToBounds = true
         // Initialization code
     }
 

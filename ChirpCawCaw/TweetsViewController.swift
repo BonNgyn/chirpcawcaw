@@ -8,6 +8,7 @@
 
 import UIKit
 import DateTools
+import AFDateHelper
 
 class TweetsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -43,10 +44,10 @@ class TweetsViewController: UIViewController, UITableViewDelegate, UITableViewDa
         let tweet = tweets[indexPath.row]
         
         cell.usernameLabel.text = tweet.user?.name as? String
-        cell.screenNameLabel.text = tweet.user?.screenname as? String
+        cell.screenNameLabel.text = "@ \(tweet.user?.screenname as! String)"
         cell.tweetLabel.text = tweet.text as? String
         cell.userImage.image = getUserImage(tweet)
-        cell.timestampLabel.text = tweet.timestamp?.timeAgoSinceNow()
+        cell.timestampLabel.text = tweet.timestamp?.shortTimeAgoSinceNow()
         
         return cell
     }
@@ -91,22 +92,26 @@ class TweetsViewController: UIViewController, UITableViewDelegate, UITableViewDa
                     let tweet = self.tweets[indexPath.row]
                     
                     vc.userNameSegue = tweet.user?.name as? String
-                    vc.screenNameSegue = tweet.user?.screenname as? String
+                    vc.screenNameSegue = "@\(tweet.user?.screenname as! String)"
                     vc.tweetSegue = tweet.text as? String
                     vc.userImageSegue = getUserImage(tweet)
-                    vc.timestampSegue = tweet.timestamp?.timeAgoSinceNow()
+                    vc.timestampSegue = tweet.timestamp?.toString(format: .Custom("MM/dd/yy, H:mm a"))
                 }
                 default: break
             }
         }
     }
-    
+
     func getUserImage(tweet: Tweet) -> UIImage {
         let url = tweet.user?.profileUrl
-        var image: UIImage!
+        var image: UIImage = UIImage(named: "no_profileImage.jpeg")!
+        let imageBool = tweet.user?.profileImageBool!
         
-        if let data = NSData(contentsOfURL: url!) {
-            image = UIImage(data:data)!
+        if !imageBool! {
+            if let data = NSData(contentsOfURL: url!) {
+                image = UIImage(data:data)!
+                
+            }
         }
         return image
     }
