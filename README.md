@@ -2,7 +2,7 @@
 
 **ChirpCawCaw** is a basic twitter app to read and compose tweets the [Twitter API](https://apps.twitter.com/).
 
-Time spent: **X** hours spent in total
+Time spent: **20** hours spent in total
 
 ## User Stories
 
@@ -10,20 +10,20 @@ The following **required** functionality is completed:
 
 - [x] User can sign in using OAuth login flow
 - [x] The current signed in user will be persisted across restarts
-- [ ] User can view last 20 tweets from their home timeline
-- [ ] In the home timeline, user can view tweet with the user profile picture, username, tweet text, and timestamp.
-- [ ] User can pull to refresh.
-- [ ] User should display the relative timestamp for each tweet "8m", "7h"
-- [ ] Retweeting and favoriting should increment the retweet and favorite count.
-- [ ] User can tap on a tweet to view it, with controls to retweet, favorite, and reply.
-- [ ] User can compose a new tweet by tapping on a compose button.
-- [ ] User can tap the profile image in any tweet to see another user's profile
-   - [ ] Contains the user header view: picture and tagline
-   - [ ] Contains a section with the users basic stats: # tweets, # following, # followers
-   - [ ] Profile view should include that user's timeline
-- [ ] User can navigate to view their own profile
-   - [ ] Contains the user header view: picture and tagline
-   - [ ] Contains a section with the users basic stats: # tweets, # following, # followers
+- [x] User can view last 20 tweets from their home timeline
+- [x] In the home timeline, user can view tweet with the user profile picture, username, tweet text, and timestamp.
+- [x] User can pull to refresh.
+- [x] User should display the relative timestamp for each tweet "8m", "7h"
+- [x] Retweeting and favoriting should increment the retweet and favorite count.
+- [x] User can tap on a tweet to view it, with controls to retweet, favorite, and reply.
+- [x] User can compose a new tweet by tapping on a compose button.
+- [x] User can tap the profile image in any tweet to see another user's profile
+   - [x] Contains the user header view: picture and tagline
+   - [x] Contains a section with the users basic stats: # tweets, # following, # followers
+   - [x] Profile view should include that user's timeline
+- [x] User can navigate to view their own profile
+   - [x] Contains the user header view: picture and tagline
+   - [x] Contains a section with the users basic stats: # tweets, # following, # followers
 
 The following **optional** features are implemented:
 
@@ -49,6 +49,8 @@ Please list two areas of the assignment you'd like to **discuss further with you
 
 Here's a walkthrough of implemented user stories:
 
+<img src='http://i.imgur.com/U1dtlsw.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 <img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
