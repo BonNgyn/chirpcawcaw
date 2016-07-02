@@ -9,6 +9,9 @@
 import UIKit
 
 class profileTweetCell: UITableViewCell {
+    
+    
+    var tweetId: String!
 
     @IBOutlet weak var profileLikeCount: UILabel!
     @IBOutlet weak var profileRetweetCount: UILabel!
@@ -17,6 +20,19 @@ class profileTweetCell: UITableViewCell {
     @IBOutlet weak var profileScreenNameLabel: UILabel!
     @IBOutlet weak var profileTweetLabel: UILabel!
     @IBOutlet weak var profileTimestampLabel: UILabel!
+    
+    var tweet: Tweet? {
+        didSet {
+            self.profileUserImage.setImageWithURL((tweet!.user?.profileUrl)!)
+            self.profileUsernameLabel.text = tweet!.user?.name as? String
+            self.profileScreenNameLabel.text = "@" + ((tweet!.user?.screenname)! as String)
+            self.profileTweetLabel.text = tweet!.text as? String
+            self.profileTimestampLabel.text = tweet!.timestamp?.shortTimeAgoSinceNow()
+            self.profileRetweetCount.text = "\(tweet!.retweetCount)"
+            self.profileLikeCount.text = "\(tweet!.favoritesCount)"
+        }
+    }
+
     
     override func awakeFromNib() {
         super.awakeFromNib()

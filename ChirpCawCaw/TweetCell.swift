@@ -10,6 +10,17 @@ import UIKit
 
 class TweetCell: UITableViewCell {
     
+    var tweetId: String!
+    
+    @IBOutlet weak var userImage: UIImageView!
+    @IBOutlet weak var usernameLabel: UILabel!
+    @IBOutlet weak var screenNameLabel: UILabel!
+    @IBOutlet weak var tweetLabel: UILabel!
+    @IBOutlet weak var timestampLabel: UILabel!
+    @IBOutlet weak var retweetCountLabel: UILabel!
+    @IBOutlet weak var likeCountLabel: UILabel!
+    
+    
     var tweet: Tweet? {
         didSet {
             self.userImage.setImageWithURL((tweet!.user?.profileUrl)!)
@@ -22,16 +33,6 @@ class TweetCell: UITableViewCell {
             self.likeCountLabel.text = "\(tweet!.favoritesCount)"
         }
     }
-    
-    var tweetId: String!
-    
-    @IBOutlet weak var userImage: UIImageView!
-    @IBOutlet weak var usernameLabel: UILabel!
-    @IBOutlet weak var screenNameLabel: UILabel!
-    @IBOutlet weak var tweetLabel: UILabel!
-    @IBOutlet weak var timestampLabel: UILabel!
-    @IBOutlet weak var retweetCountLabel: UILabel!
-    @IBOutlet weak var likeCountLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -62,14 +63,5 @@ class TweetCell: UITableViewCell {
         }) { (error: NSError) in
             print("ERROR: \(error.localizedDescription)")
         }
-    }
-    
-    func getTweet(tweet: Tweet) {
-        self.userImage.setImageWithURL((tweet.user?.profileUrl)!)
-        self.usernameLabel.text = tweet.user?.name as? String
-        self.screenNameLabel.text = "@" + ((tweet.user?.screenname)! as String)
-        self.tweetLabel.text = tweet.text as? String
-        
-        self.tweet = tweet
     }
 }

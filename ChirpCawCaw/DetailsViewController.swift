@@ -36,6 +36,9 @@ class DetailsViewController: UIViewController {
         detailTweet.text = tweetSegue
         detailRetweetCount.text = retweetCountSegue
         detailLikeCount.text = likeCountSegue
+        
+        self.detailUserImage.layer.cornerRadius = 8.0;
+        self.detailUserImage.clipsToBounds = true
 
         // Do any additional setup after loading the view.
     }
