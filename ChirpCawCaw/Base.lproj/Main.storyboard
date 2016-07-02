@@ -51,15 +51,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="205" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3kh-yX-EHO">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="164" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3kh-yX-EHO">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="myTweetCell" rowHeight="205" id="P0E-T0-6Gf" customClass="TweetCell" customModule="ChirpCawCaw" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="92" width="375" height="205"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="myTweetCell" rowHeight="164" id="P0E-T0-6Gf" customClass="TweetCell" customModule="ChirpCawCaw" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="92" width="375" height="164"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="P0E-T0-6Gf" id="EbO-RY-Ftg">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="204.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="163.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QiI-IC-brX">
@@ -92,7 +92,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="67h-Ve-vnn">
-                                                    <rect key="frame" x="76" y="59" width="272" height="73"/>
+                                                    <rect key="frame" x="76" y="59" width="272" height="59"/>
                                                     <attributedString key="attributedText">
                                                         <fragment content="tweet">
                                                             <attributes>
@@ -117,14 +117,20 @@
                                                     </attributedString>
                                                     <color key="highlightedColor" red="0.0" green="0.0" blue="0.0" alpha="0.68060344829999997" colorSpace="calibratedRGB"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QEl-Ep-5uJ">
+                                                    <rect key="frame" x="8" y="23" width="57" height="50.5"/>
+                                                    <connections>
+                                                        <segue destination="feV-BI-zeL" kind="presentation" identifier="imageToUserSegue" id="Jho-xC-mvk"/>
+                                                    </connections>
+                                                </button>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WO0-Eo-Eib">
-                                                    <rect key="frame" x="76" y="148" width="26" height="27"/>
+                                                    <rect key="frame" x="76" y="115" width="26" height="27"/>
                                                     <state key="normal" image="Reply Arrow Filled-100.png">
                                                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     </state>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7sN-lk-AqZ">
-                                                    <rect key="frame" x="129" y="150" width="27" height="28"/>
+                                                    <rect key="frame" x="129" y="117" width="27" height="28"/>
                                                     <state key="normal" title="retweet" image="retweet_notTouched.png">
                                                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     </state>
@@ -133,7 +139,7 @@
                                                     </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wQS-ha-vK9">
-                                                    <rect key="frame" x="164" y="152" width="34" height="23"/>
+                                                    <rect key="frame" x="164" y="119" width="34" height="23"/>
                                                     <attributedString key="attributedText">
                                                         <fragment content="0">
                                                             <attributes>
@@ -145,7 +151,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xiO-uB-dOf">
-                                                    <rect key="frame" x="226" y="152" width="34" height="23"/>
+                                                    <rect key="frame" x="226" y="119" width="34" height="23"/>
                                                     <attributedString key="attributedText">
                                                         <fragment content="0">
                                                             <attributes>
@@ -156,15 +162,8 @@
                                                     </attributedString>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QEl-Ep-5uJ">
-                                                    <rect key="frame" x="8" y="23" width="57" height="50.5"/>
-                                                    <connections>
-                                                        <action selector="touchImageButton:" destination="P0E-T0-6Gf" eventType="touchUpInside" id="fKg-wF-C23"/>
-                                                        <segue destination="feV-BI-zeL" kind="presentation" id="QYt-Ld-kJU"/>
-                                                    </connections>
-                                                </button>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m3a-HP-UQc">
-                                                    <rect key="frame" x="192" y="151" width="26" height="27"/>
+                                                    <rect key="frame" x="192" y="118" width="26" height="27"/>
                                                     <state key="normal" title="like" image="not-liked.png">
                                                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     </state>
@@ -179,6 +178,7 @@
                                             <outlet property="retweetCountLabel" destination="wQS-ha-vK9" id="DGZ-iG-OSE"/>
                                             <outlet property="screenNameLabel" destination="3rB-ec-x5U" id="8JJ-ie-5H9"/>
                                             <outlet property="timestampLabel" destination="Hcg-N0-aQc" id="U98-Sf-wWn"/>
+                                            <outlet property="touchButton" destination="QEl-Ep-5uJ" id="dvX-JO-tlF"/>
                                             <outlet property="tweetLabel" destination="67h-Ve-vnn" id="x9B-Fx-OAB"/>
                                             <outlet property="userImage" destination="QiI-IC-brX" id="ud9-cB-hgM"/>
                                             <outlet property="usernameLabel" destination="F1n-Sl-YyJ" id="NBW-Hd-5l3"/>
@@ -231,7 +231,7 @@
                                 <rect key="frame" x="0.0" y="390" width="375" height="277"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="myProfileTweetCell" rowHeight="180" id="oYH-Gb-ZY2" customClass="userTweetCell" customModule="ChirpCawCaw" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="myUserTableViewCell" rowHeight="180" id="oYH-Gb-ZY2" customClass="UserTableViewCell" customModule="ChirpCawCaw" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="180"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="oYH-Gb-ZY2" id="xlP-Gc-7si">
@@ -338,12 +338,13 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="userImage" destination="fPq-pF-FQV" id="HlF-HJ-h8n"/>
-                                            <outlet property="user_RetweetCount" destination="84c-Ba-niG" id="xvm-Pa-uNL"/>
-                                            <outlet property="user_ScreenName" destination="wnl-hT-JYf" id="bG8-Ot-bJd"/>
-                                            <outlet property="user_TimeStamp" destination="RT2-Ca-8zC" id="lkD-GN-3gC"/>
-                                            <outlet property="user_Tweet" destination="tGu-hw-Ss6" id="5Jb-Y9-Nhz"/>
-                                            <outlet property="user_Username" destination="WP0-wq-nvc" id="Kuk-Fc-Mlf"/>
+                                            <outlet property="profileLikeCount" destination="aVb-IS-gVm" id="kqJ-gT-v7S"/>
+                                            <outlet property="profileRetweetCount" destination="84c-Ba-niG" id="mdL-fO-kmr"/>
+                                            <outlet property="profileScreenNameLabel" destination="wnl-hT-JYf" id="Efa-Ut-ffW"/>
+                                            <outlet property="profileTimestampLabel" destination="RT2-Ca-8zC" id="WRZ-Mg-VJ7"/>
+                                            <outlet property="profileTweetLabel" destination="tGu-hw-Ss6" id="uhe-1K-BIt"/>
+                                            <outlet property="profileUserImage" destination="fPq-pF-FQV" id="Tw2-sa-bQU"/>
+                                            <outlet property="profileUsernameLabel" destination="WP0-wq-nvc" id="Xfk-Ah-FpQ"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -447,8 +448,11 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="followersCount" destination="9xz-mp-UlU" id="JPV-86-OVj"/>
+                        <outlet property="followingCount" destination="CXX-s0-KJu" id="I6c-IH-zTt"/>
                         <outlet property="profileImage" destination="LKA-8g-NYg" id="Pac-bt-MhX"/>
                         <outlet property="tableView" destination="1TQ-84-BZr" id="OaO-Xm-YRK"/>
+                        <outlet property="tweetsCount" destination="P7B-mG-gfv" id="hkL-r1-Qwa"/>
                         <outlet property="user_Description" destination="sY0-5E-zNC" id="Dl6-9A-7xZ"/>
                         <outlet property="user_ScreenName" destination="VNH-vp-t54" id="M4o-DX-zl8"/>
                         <outlet property="user_Username" destination="nZ0-DN-F1D" id="zBf-y5-9XR"/>
@@ -683,7 +687,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="INh-wC-o3o"/>
+                    <tabBarItem key="tabBarItem" title="Item" selectedImage="profile_icon.png" id="INh-wC-o3o"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="followersCount" destination="V3u-Pm-tHX" id="2dx-Qs-8uJ"/>
@@ -919,7 +923,7 @@
         <scene sceneID="wJE-QQ-0A9">
             <objects>
                 <navigationController storyboardIdentifier="TweetsNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="JRK-aT-ukt" customClass="NaviViewController" customModule="ChirpCawCaw" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="bgn-zd-9g7"/>
+                    <tabBarItem key="tabBarItem" title="Item" selectedImage="profile_icon.png" id="bgn-zd-9g7"/>
                     <toolbarItems/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="dJW-H4-1AZ">
@@ -957,6 +961,7 @@
     <resources>
         <image name="Reply Arrow Filled-100.png" width="100" height="100"/>
         <image name="not-liked.png" width="96" height="96"/>
+        <image name="profile_icon.png" width="80" height="73"/>
         <image name="retweet_notTouched.png" width="96" height="96"/>
     </resources>
 </document>
